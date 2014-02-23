@@ -6,3 +6,12 @@ python manager.py startapp XXX
 
 query create database sql for app module XXX
 python manage.py sql XXX
+
+test XXX according to unit case
+python manage.py test XXX
+
+we can code down model test and view test
+https://docs.djangoproject.com/en/1.6/intro/tutorial05/
+
+
+static file solution
