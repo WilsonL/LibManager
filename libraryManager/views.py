@@ -1,6 +1,7 @@
 # Create your views here.
 from django.shortcuts import render
-
+from oauth2_provider.views.generic import ProtectedResourceView
+from django.http.response import HttpResponse
 
 def index(request):
     context = {
@@ -9,3 +10,7 @@ def index(request):
         'index_user': "Wilson",
     }
     return render(request, 'libraryManager/index.html', context)
+
+class ApiEndpoint(ProtectedResourceView):
+    def get(self, request, *args, **kwargs):
+        return HttpResponse('Hello, OAuth2!')

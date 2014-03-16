@@ -6,6 +6,7 @@ python manager.py startapp XXX
 
 query create database sql for app module XXX
 python manage.py sql XXX
+python manage.py syncdb
 
 test XXX according to unit case
 python manage.py test XXX
